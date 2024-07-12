@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 :root {
-  --bg-url: url(./assets/bg-desktop.jpg);
+  --bg-url: url(./assets/bg-mobile.jpg);
   --text-color: white;
   --profile-img-border-color: rgba(255, 255, 255, 0.5);
   --switch-bg-img: url(./assets/moon-stars.svg);
@@ -16,7 +16,7 @@
 }
 
 .light {
-  --bg-url: url(./assets/bg-desktop-light.jpg);
+  --bg-url: url(./assets/bg-mobile-light.jpg);
   --text-color: black;
   --profile-img-border-color: rgba(0, 0, 0, 0.5);
   --switch-bg-img: url(./assets/sun.svg);
@@ -30,6 +30,7 @@
 body {
   background: var(--bg-url) no-repeat top center/cover;
   transition: background 0.6s;
+  height: 100vh;
 }
 
 body * {
@@ -164,6 +165,15 @@ ul li a:hover {
 
 #footer a:hover {
   background: var(--social-links-hover);
+}
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
 
 @keyframes slide-in {
